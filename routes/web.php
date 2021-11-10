@@ -28,4 +28,5 @@ Route::get('ets2021', "ViewController@showETS");
 Route::get('tugasphp', "ViewController@showTugasPHP");
 
 Route::post('results',"ViewController@showResults");
+
 Route::get('tugasphp',"ViewController@tugasPHP");
