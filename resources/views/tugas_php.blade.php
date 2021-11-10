@@ -31,7 +31,8 @@
         <br>
         <div class="row">
             <div class="col-sm">
-                <form action="results.php" class="needs-validation" method="post" novalidate>
+                <form action="results" class="needs-validation" method="post" novalidate>
+                    @csrf
                     <div class="row">
                         <div class="col-sm">
                             <div class="form-group" id="nameform">

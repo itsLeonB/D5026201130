@@ -14,3 +14,18 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('tugas4', function () {
+    return view('tugas_4');
+});
+
+Route::get('praktikum2', function () {
+    return view('praktikum_2');
+});
+
+Route::get('ets2021', "ViewController@showETS");
+
+Route::get('tugasphp', "ViewController@showTugasPHP");
+
+Route::post('results',"ViewController@showResults");
+Route::get('tugasphp',"ViewController@tugasPHP");
