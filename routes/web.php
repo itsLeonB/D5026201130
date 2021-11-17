@@ -25,8 +25,19 @@ Route::get('praktikum2', function () {
 
 Route::get('ets2021', "ViewController@showETS");
 
-Route::get('tugasphp', "ViewController@showTugasPHP");
+Route::get('tugasphp',"ViewController@tugasPHP");
 
 Route::post('results',"ViewController@showResults");
 
-Route::get('tugasphp',"ViewController@tugasPHP");
+//route CRUD
+Route::get('/pegawai','PegawaiController@index');
+
+Route::get('/pegawai/tambah','PegawaiController@tambah');
+
+Route::post('/pegawai/store','PegawaiController@store');
+
+Route::get('/pegawai/edit/{id}','PegawaiController@edit');
+
+Route::post('/pegawai/update','PegawaiController@update');
+
+Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
