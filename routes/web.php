@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('tugasjs', function () {
+    return view('tugas_js');
+});
+
 Route::get('tugas4', function () {
     return view('tugas_4');
 });

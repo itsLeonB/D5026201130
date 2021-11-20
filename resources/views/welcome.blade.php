@@ -89,6 +89,7 @@
                     <a href="tugas_2.html">Tugas 2</a>
                     <a href="tugas_3.html">Tugas 3</a>
                     <a href="praktikum_1.html">Praktikum 1</a>
+                    <a href="tugasjs">Tugas JS</a>
                     <a href="tugas4">Tugas 4</a>
                     <a href="praktikum2">Praktikum 2</a>
                     <a href="ets2021">ETS</a>
