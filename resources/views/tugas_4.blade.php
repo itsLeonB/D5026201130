@@ -23,6 +23,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm">
+                <a href="/">Home</a>
                 <h1>Genshin Impact Random Team Maker</h1>
                 <h2>
                     <ol>

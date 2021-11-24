@@ -14,6 +14,7 @@
         body {
             padding: 50px 0;
         }
+
     </style>
 </head>
 
@@ -21,6 +22,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm">
+                <a href="/">Home</a>
                 <h2>COVID-19 Risk Self-assessment Program</h2>
             </div>
         </div>
@@ -164,9 +166,9 @@
                     <br>
                     <button type="submit" class="btn btn-primary" id="btnsubmit">Submit</button>
                     <script>
-                        $(document).ready(function () {
+                        $(document).ready(function() {
                             $(".invalid-feedback").hide();
-                            $("#btnsubmit").click(function () {
+                            $("#btnsubmit").click(function() {
                                 var name = $("#name").val();
                                 var age = $("#age").val();
                                 var sex = $("#selectsex input:radio:checked").val();
@@ -185,23 +187,23 @@
                                 var q4 = $("#q4 input:radio:checked").val();
                                 ansList.push(q4);
                                 var score = 0;
-                                ansList.forEach(x => { if (x == "true") { score++ } });
+                                ansList.forEach(x => {
+                                    if (x == "true") {
+                                        score++
+                                    }
+                                });
                                 if (sex == "m" && age > 25) {
                                     $("#sal").text("Mr.");
-                                }
-                                else if (sex == "f" && age > 25 && marriage == false) {
+                                } else if (sex == "f" && age > 25 && marriage == false) {
                                     $("#sal").text("Miss");
-                                }
-                                else if (sex == "f" && age > 25 && marriage == true) {
+                                } else if (sex == "f" && age > 25 && marriage == true) {
                                     $("#sal").text("Mrs.");
-                                }
-                                else {
+                                } else {
                                     $("#sal").text("");
                                 }
                                 if (score >= 3) {
                                     $("#rec").text("You may need COVID-19 testing.");
-                                }
-                                else if (score == 2) {
+                                } else if (score == 2) {
                                     if (ansList[2] == "true") {
                                         $("#rec").text("You may need COVID-19 testing.");
                                     } else if (ansList[0] == "true" && ansList[1] == "true") {
@@ -220,8 +222,11 @@
                                 } else {
                                     $("#rec").text("Practice social distancing and watch for symptoms.");
                                 }
-                                if (name != "" && age != "" && sex != null && truecheck != false && q1 != null && q2 != null && q3 != null && q4 != null) {
-                                    $("html, body").animate({ scrollTop: $("html, body").get(0).scrollHeight }, 10);
+                                if (name != "" && age != "" && sex != null && truecheck != false && q1 != null && q2 !=
+                                    null && q3 != null && q4 != null) {
+                                    $("html, body").animate({
+                                        scrollTop: $("html, body").get(0).scrollHeight
+                                    }, 10);
                                     $("#ans").slideDown();
                                 }
                                 if (name == "") {
@@ -266,7 +271,7 @@
     <div class="container" id="ans">
         <div class="row">
             <script>
-                $(document).ready(function () {
+                $(document).ready(function() {
                     $("#ans").hide();
                 });
             </script>
@@ -301,6 +306,8 @@
             <div class="col-sm">
                 <small>For more info about COVID-19, click <a
                         href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub/q-a-detail/coronavirus-disease-covid-19">here</a></small>
+                <br>
+                <a href="/">Home</a>
             </div>
         </div>
     </div>

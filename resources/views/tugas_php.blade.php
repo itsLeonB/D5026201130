@@ -19,6 +19,8 @@
     <div class="container" id="questions">
         <div class="row">
             <div class="col-sm">
+                <a href="/">Home</a>
+
                 <h2>COVID-19 Risk Self-assessment Program</h2>
             </div>
         </div>

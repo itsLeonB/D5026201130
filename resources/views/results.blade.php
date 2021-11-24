@@ -108,6 +108,8 @@
                 <h7>For more info about COVID-19, click <a
                         href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub/q-a-detail/coronavirus-disease-covid-19">here</a>
                 </h7>
+                <br>
+                <a href="/">Home</a>
             </div>
         </div>
     </div>
