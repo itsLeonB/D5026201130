@@ -98,6 +98,7 @@
                 <br>
                 <div class="links">
                     <a href="/pegawai">Pegawai</a>
+                    <a href="/absen">Absen</a>
                     <a href="/tugas">Tugas</a>
                 </div>
             </div>
