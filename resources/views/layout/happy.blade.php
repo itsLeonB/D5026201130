@@ -14,6 +14,7 @@
     <script
         src="http://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js">
     </script>
+    <script src="https://kit.fontawesome.com/39f03edc73.js" crossorigin="anonymous"></script>
     <style>
         #header {
             color: whitesmoke;
@@ -74,10 +75,9 @@
                 </ul>
             </div>
             <div class="col-sm-10">
-                <h4>
-                    <br>
+                <h3>
                     @yield('judulhalaman')
-                </h4>
+                </h3>
                 @section('konten')
                 @show
             </div>
