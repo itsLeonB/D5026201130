@@ -44,6 +44,14 @@
             padding: 1%;
         }
 
+        table, form {
+            margin-top: 1%;
+        }
+
+        #cell-opsi {
+            text-align: center;
+        }
+
     </style>
 </head>
 

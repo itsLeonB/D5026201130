@@ -3,34 +3,39 @@
 @section('judulhalaman', 'TAMBAH DATA TUGAS')
 
 @section('konten')
-    <div class="container">
-        <div class="row">
-            <div class="col-sm">
-                <a href="/tugas"> Kembali</a>
+    <a href="/tugas" class="btn btn-primary"><i class="fas fa-arrow-left"></i> Kembali</a>
+    <form action="/tugas/store" method="post">
+        {{ csrf_field() }}
+        <div class="form-group">
+            <label for="id_pegawai">ID Pegawai:</label>
+            <input class="form-control" type="number" name="id_pegawai" placeholder="007" required>
+        </div>
+        <div class="form-group">
+            <label for="dtpickerdemo" class="control-label">Tanggal:</label>
+            <div class='input-group date' id='dtpickerdemo'>
+                <input type='text' class="form-control" name="tanggal" required>
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
             </div>
         </div>
-        <br>
-        <div class="row">
-            <div class="col-sm">
-                <form action="/tugas/store" method="post">
-                    {{ csrf_field() }}
-                    <div class="form-group">
-                        ID Pegawai <input class="form-control" type="number" name="id_pegawai" required="required">
-                    </div>
-                    <div class="form-group">
-                        Tanggal <input class="form-control" type="date" name="tanggal" required="required">
-                    </div>
-                    <div class="form-group">
-                        Nama Tugas <input class="form-control" type="text" name="nama_tugas" required="required"
-                            maxlength="50">
-                    </div>
-                    <div class="form-group">
-                        Status <input class="form-control" type="text" name="status" required="required"
-                            maxlength="1">
-                    </div>
-                    <input class="btn btn-primary" type="submit" value="Simpan Data">
-                </form>
-            </div>
+        <script type="text/javascript">
+            $(function() {
+                $('#dtpickerdemo').datetimepicker({
+                    format: "YYYY-MM-DD hh:mm:ss",
+                    "defaultDate": new Date(),
+                    locale: "id"
+                });
+            });
+        </script>
+        <div class="form-group">
+            <label for="nama_tugas">Nama Tugas:</label>
+            <input class="form-control" type="text" name="nama_tugas" placeholder="Project" required maxlength="50">
         </div>
-    </div>
+        <div class="form-group">
+            <label for="status">Status:</label>
+            <input class="form-control" type="text" name="status" placeholder="N" required maxlength="1">
+        </div>
+        <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Simpan Data</button>
+    </form>
 @endsection

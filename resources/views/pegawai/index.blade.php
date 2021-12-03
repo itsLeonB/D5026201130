@@ -4,7 +4,7 @@
 
 @section('konten')
     <a href="/pegawai/tambah" class="btn btn-primary"><i class="fas fa-plus"></i> Tambah Pegawai Baru</a>
-    <table class="table table-bordered table-striped table-hover table-responsive-sm" style="margin-top: 1%;">
+    <table class="table table-bordered table-striped table-hover table-responsive-sm">
         <tr>
             <th>Nama</th>
             <th>Jabatan</th>
@@ -18,7 +18,7 @@
                 <td>{{ $p->pegawai_jabatan }}</td>
                 <td>{{ $p->pegawai_umur }}</td>
                 <td>{{ $p->pegawai_alamat }}</td>
-                <td>
+                <td id="cell-opsi">
                     <a href="/pegawai/edit/{{ $p->pegawai_id }}" class="btn-sm btn-warning"><i class="fas fa-edit"></i>
                         Edit</a>
                     <a href="/pegawai/hapus/{{ $p->pegawai_id }}" class="btn-sm btn-danger"><i class="fas fa-trash"></i>
