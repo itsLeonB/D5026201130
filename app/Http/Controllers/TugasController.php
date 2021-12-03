@@ -19,9 +19,10 @@ class TugasController extends Controller
     // method untuk menampilkan view form tambah tugas
     public function tambah()
     {
+        $pegawai = DB::table('pegawai')->orderBy('pegawai_nama', 'asc')->get();
 
         // memanggil view tambah
-        return view('tugas.tambah');
+        return view('tugas.tambah', ['pegawai' => $pegawai]);
     }
 
     // method untuk insert data ke table tugas
@@ -43,8 +44,10 @@ class TugasController extends Controller
     {
         // mengambil data tugas berdasarkan id yang dipilih
         $tugas = DB::table('tugas')->where('id', $id)->get();
+        $pegawai = DB::table('pegawai')->orderBy('pegawai_nama', 'asc')->get();
+
         // passing data tugas yang didapat ke view edit.blade.php
-        return view('tugas.edit', ['tugas' => $tugas]);
+        return view('tugas.edit', ['tugas' => $tugas, 'pegawai' => $pegawai]);
     }
 
     // update data tugas

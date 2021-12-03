@@ -21,8 +21,12 @@
             background-color: #202020;
         }
 
-        #home {
+        #navmenu h4 {
             padding-left: 12%;
+        }
+
+        #navmenu h5 {
+            padding-left: 20%;
         }
 
         #navmenu {
@@ -34,6 +38,12 @@
         #navmenu a {
             text-decoration: none;
             color: whitesmoke;
+            transition-duration: 1s;
+        }
+
+        #navmenu a:hover {
+            text-decoration: none;
+            color: #428bca;
         }
 
         footer {
@@ -44,7 +54,8 @@
             padding: 1%;
         }
 
-        table, form {
+        table,
+        form {
             margin-top: 1%;
         }
 
@@ -73,14 +84,12 @@
         <div class="row">
             <div class="col-sm-2" id="navmenu">
                 <h3>Navigation</h3>
-                <h4 id="home"><a href="/">Home</a></h4>
-                <ul>
-                    <li><a href="/pegawai">Pegawai</a></li>
-                    <li><a href="/absen">Absen</a></li>
-                    <li><a href="/tugas">Tugas</a></li>
-                    <li><a href="/minggudepan">Minggu depan</a></li>
-                    <li><a href="/praktikum">Praktikum</a></li>
-                </ul>
+                <h4><a href="/"><i class="fas fa-home"></i> Home</a></h4>
+                <h5><a href="/pegawai"><i class="fas fa-user"></i> Pegawai</a></h5>
+                <h5><a href="/absen"><i class="fas fa-calendar-week"></i> Absen</a></h5>
+                <h5><a href="/tugas"><i class="fas fa-tasks"></i> Tugas</a></h5>
+                <h5><a href="/minggudepan">Minggu depan</a></h5>
+                <h5><a href="/praktikum">Praktikum</a></h5>
             </div>
             <div class="col-sm-10">
                 <h3>

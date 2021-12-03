@@ -3,59 +3,46 @@
 @section('judulhalaman', 'TAMBAH DATA ABSEN')
 
 @section('konten')
-    <a href="/absen"> Kembali</a>
-
-    <br />
-    <br />
-
-
-
+    <a href="/absen" class="btn btn-primary"><i class="fas fa-arrow-left"></i> Kembali</a>
     <form action="/absen/store" method="post">
         {{ csrf_field() }}
-        <div class="row">
-            <div class='col-lg-9'>
-                <div class="form-group">
-                    <label for="nama" class="col-sm-3 control-label">Nama Pegawai :</label>
-                    <div class='col-sm-4 input-group date' id='nama'>
-                        <select class="form-control" name="idpegawai">
-                            @foreach ($pegawai as $p)
-                                <option value="{{ $p->pegawai_id }}"> {{ $p->pegawai_nama }}</option>
-                            @endforeach
-                        </select>
-                    </div>
-                </div>
+        <div class="form-group">
+            <label for="idpegawai">Nama Pegawai:</label>
+            <div class='col-sm-6 input-group' id='idpegawai'>
+                <span class="input-group-addon">
+                    <i class="fas fa-user"></i>
+                </span>
+                <select class="form-control" name="idpegawai">
+                    @foreach ($pegawai as $p)
+                        <option value="{{ $p->pegawai_id }}"> {{ $p->pegawai_nama }}</option>
+                    @endforeach
+                </select>
             </div>
         </div>
-
-
-        <div class="row">
-            <div class='col-lg-9'>
-                <div class="form-group">
-                    <label for="dtpickerdemo" class="col-sm-3 control-label">Tanggal :</label>
-                    <div class='col-sm-4 input-group date' id='dtpickerdemo'>
-                        <input type='text' class="form-control" name="tanggal" required="required" />
-                        <span class="input-group-addon">
-                            <span class="glyphicon glyphicon-calendar"></span>
-                        </span>
-                    </div>
-                </div>
+        <div class="form-group">
+            <label for="dtpickerdemo">Tanggal:</label>
+            <div class='col-sm-6 input-group date' id='dtpickerdemo'>
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+                <input type='text' class="form-control" name="tanggal" required>
             </div>
-            <script type="text/javascript">
-                $(function() {
-                    $('#dtpickerdemo').datetimepicker({
-                        format: "YYYY-MM-DD hh:mm:ss",
-                        "defaultDate": new Date(),
-                        locale: "id"
-                    });
+        </div>
+        <script type="text/javascript">
+            $(function() {
+                $('#dtpickerdemo').datetimepicker({
+                    format: "YYYY-MM-DD hh:mm:ss",
+                    "defaultDate": new Date(),
+                    locale: "id"
                 });
-            </script>
+            });
+        </script>
+        <div class="form-group">
+            <label>Status:</label>
+            <br>
+            <label class="radio-inline" for="a"><input type="radio" id="a" name="status" value="A" checked>TIDAK HADIR</label>
+            <label class="radio-inline" for="h"><input type="radio" id="h" name="status" value="H">HADIR</label>
         </div>
-        Status
-        <input type="radio" id="h" name="status" value="H">
-        <label for="h">HADIR</label>
-        <input type="radio" id="a" name="status" value="A" checked="checked">
-        <label for="a">TIDAK HADIR</label><br>
-        <input type="submit" value="Simpan Data">
+        <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Simpan Data</button>
     </form>
-
 @endsection
