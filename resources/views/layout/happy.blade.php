@@ -39,7 +39,8 @@
             color: whitesmoke;
             background-color: #202020;
             bottom: 1%;
-            /* position: fixed; */
+            text-align: right;
+            padding: 1%;
         }
 
     </style>

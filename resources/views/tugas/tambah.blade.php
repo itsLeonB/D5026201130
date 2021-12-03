@@ -1,26 +1,11 @@
-<!DOCTYPE html>
-<html>
+@extends('layout.happy')
+@section('title', 'Data Tugas')
+@section('judulhalaman', 'TAMBAH DATA TUGAS')
 
-<head>
-    <title>Tambah Tugas</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <style>
-        body {
-            padding: 3%;
-        }
-
-    </style>
-</head>
-
-<body>
+@section('konten')
     <div class="container">
         <div class="row">
             <div class="col-sm">
-                <h3>Data Tugas</h3>
                 <a href="/tugas"> Kembali</a>
             </div>
         </div>
@@ -48,6 +33,4 @@
             </div>
         </div>
     </div>
-</body>
-
-</html>
+@endsection
