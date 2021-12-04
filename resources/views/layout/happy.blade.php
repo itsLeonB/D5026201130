@@ -22,17 +22,36 @@
         }
 
         #navmenu h4 {
-            padding-left: 12%;
+            padding-left: 4%;
         }
 
         #navmenu h5 {
-            padding-left: 20%;
+            padding-left: 8%;
         }
 
         #navmenu {
             color: whitesmoke;
             background-color: #202020;
             min-height: calc(100vh - 50px);
+            width: 10%;
+        }
+
+        #navbutton {
+            color: whitesmoke;
+            background-color: #202020;
+            min-height: calc(100vh - 50px);
+            width: 1%;
+            display: table;
+            overflow: hidden;
+        }
+
+        #navbutton i {
+            margin: -10px;
+        }
+
+        #navbutton div {
+            display: table-cell;
+            vertical-align: middle;
         }
 
         #navmenu a {
@@ -91,7 +110,33 @@
                 <h5><a href="/minggudepan">Minggu depan</a></h5>
                 <h5><a href="/praktikum">Praktikum</a></h5>
             </div>
-            <div class="col-sm-10">
+            <div class="col-sm-1" id="navbutton">
+                <div>
+                    <h2 id="icon"><i class="fas fa-chevron-left"></i></h2>
+                </div>
+            </div>
+            <script>
+                var i = 0;
+                $("#navbutton").click(function() {
+
+                    $("#navmenu").animate({
+                        width: 'toggle'
+                    }, 250);
+                });
+                $("#navbutton").click(function() {
+                    if (i % 2 === 1) {
+                        $('#icon').fadeOut(250, function() {
+                            $(this).html('<i class="fas fa-chevron-left">').fadeIn(500);
+                        });
+                    } else {
+                        $('#icon').fadeOut(250, function() {
+                            $(this).html('<i class="fas fa-chevron-right"></i>').fadeIn(500);
+                        });
+                    }
+                    i++;
+                });
+            </script>
+            <div class="col-sm-9">
                 <h3>
                     @yield('judulhalaman')
                 </h3>
