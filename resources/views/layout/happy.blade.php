@@ -32,14 +32,14 @@
         #navmenu {
             color: whitesmoke;
             background-color: #202020;
-            min-height: calc(100vh - 50px);
+            min-height: calc(100vh - 127px);
             width: 10%;
         }
 
         #navbutton {
             color: whitesmoke;
             background-color: #202020;
-            min-height: calc(100vh - 50px);
+            min-height: calc(100vh - 127px);
             width: 1%;
             display: table;
             overflow: hidden;
@@ -68,7 +68,6 @@
         footer {
             color: whitesmoke;
             background-color: #202020;
-            bottom: 1%;
             text-align: right;
             padding: 1%;
         }
