@@ -18,7 +18,14 @@
     <style>
         #header {
             color: whitesmoke;
-            background-color: #202020;
+            background-color: #000000;
+            background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+        }
+
+        img {
+            border: #414141;
+            border-radius: 50%;
+            padding: 10%;
         }
 
         #navmenu h4 {
@@ -31,18 +38,20 @@
 
         #navmenu {
             color: whitesmoke;
-            background-color: #202020;
             min-height: calc(100vh - 127px);
             width: 10%;
+            background-color: #000000;
+            background-image: linear-gradient(360deg, #000000 0%, #414141 74%);
         }
 
         #navbutton {
             color: whitesmoke;
-            background-color: #202020;
             min-height: calc(100vh - 127px);
             width: 1%;
             display: table;
             overflow: hidden;
+            background-color: #000000;
+            background-image: linear-gradient(360deg, #000000 0%, #414141 74%);
         }
 
         #navbutton i {
@@ -67,9 +76,10 @@
 
         footer {
             color: whitesmoke;
-            background-color: #202020;
             text-align: right;
             padding: 1%;
+            background-color: #000000;
+            background-image: linear-gradient(-270deg, #000000 10%, #414141 74%);
         }
 
         table,
