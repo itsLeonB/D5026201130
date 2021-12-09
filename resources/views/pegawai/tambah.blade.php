@@ -4,7 +4,7 @@
 
 @section('konten')
     <a href="/pegawai" class="btn btn-primary"><i class="fas fa-arrow-left"></i> Kembali</a>
-    <form action="/pegawai/store" method="post">
+    <form action="/pegawai/store" method="post" style="margin-top: 1%;">
         {{ csrf_field() }}
         <div class="form-group">
             <label for="nama">Nama:</label>

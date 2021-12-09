@@ -27,4 +27,6 @@
             </tr>
         @endforeach
     </table>
+
+    {{ $tugas->links() }}
 @endsection

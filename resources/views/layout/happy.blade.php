@@ -66,7 +66,7 @@
         #navmenu a {
             text-decoration: none;
             color: whitesmoke;
-            transition-duration: 1s;
+            transition-duration: 0.5s;
         }
 
         #navmenu a:hover {
@@ -82,8 +82,7 @@
             background-image: linear-gradient(-270deg, #000000 10%, #414141 74%);
         }
 
-        table,
-        form {
+        table {
             margin-top: 1%;
         }
 
@@ -116,8 +115,7 @@
                 <h5><a href="/pegawai"><i class="fas fa-user"></i> Pegawai</a></h5>
                 <h5><a href="/absen"><i class="fas fa-calendar-week"></i> Absen</a></h5>
                 <h5><a href="/tugas"><i class="fas fa-tasks"></i> Tugas</a></h5>
-                <h5><a href="/minggudepan">Minggu depan</a></h5>
-                <h5><a href="/praktikum">Praktikum</a></h5>
+                <h5><a href="/beras"><i class="fas fa-seedling"></i> Beras</a></h5>
             </div>
             <div class="col-sm-1" id="navbutton">
                 <div>

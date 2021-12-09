@@ -11,7 +11,16 @@ class AbsenController extends Controller
     public function index()
     {
         // mengambil data dari table absen
-        $absen = DB::table('absen')->get();
+        // $absen = DB::table('absen')->get();
+
+        // mengambil data dari table absen dengan pagination
+        // $absen = DB::table('absen')->paginate(7);
+
+        // mengambil data dari table absen dengan join
+        $absen = DB::table('absen')
+        ->join('pegawai', 'absen.ID', '=', 'pegawai.pegawai_id')
+        ->select('absen.*', 'pegawai.pegawai_nama')
+        ->paginate(7);
 
         // mengirim data absen ke view index
         return view('absen.index', ['absen' => $absen]);

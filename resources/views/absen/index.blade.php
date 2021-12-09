@@ -6,14 +6,14 @@
     <a href="/absen/tambah" class="btn btn-primary"><i class="fas fa-plus"></i> Tambah Absen Baru</a>
     <table class="table table-bordered table-striped table-hover table-responsive-sm">
         <tr>
-            <th>ID Pegawai</th>
+            <th>Nama Pegawai</th>
             <th>Tanggal</th>
             <th>Status</th>
             <th class="col-sm-2">Opsi</th>
         </tr>
         @foreach ($absen as $a)
             <tr>
-                <td>{{ $a->IDPegawai }}</td>
+                <td>{{ $a->pegawai_nama }}</td>
                 <td>{{ $a->Tanggal }}</td>
                 <td>{{ $a->Status }}</td>
                 <td id="cell-opsi">
@@ -25,4 +25,6 @@
             </tr>
         @endforeach
     </table>
+
+    {{ $absen->links() }}
 @endsection

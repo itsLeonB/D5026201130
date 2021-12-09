@@ -100,6 +100,7 @@
                     <a href="/pegawai">Pegawai</a>
                     <a href="/absen">Absen</a>
                     <a href="/tugas">Tugas</a>
+                    <a href="/beras">Beras</a>
                 </div>
             </div>
         </div>
