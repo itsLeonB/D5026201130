@@ -5,7 +5,7 @@
 @section('konten')
     <a href="/tugas" class="btn btn-primary"><i class="fas fa-arrow-left"></i> Kembali</a>
     @foreach ($tugas as $t)
-        <form action="/tugas/update" method="post">
+        <form action="/tugas/update" method="post" style="margin-top: 1%;">
             {{ csrf_field() }}
             <input type="hidden" name="id" value="{{ $t->id }}">
             <div class="form-group">
@@ -53,10 +53,10 @@
             <div class="form-group">
                 <label>Status:</label>
                 <br>
-                <label class="radio-inline" for="n"><input type="radio" id="n" name="status" value="N"
+                <label class="radio-inline" for="n" style="color: red;"><input type="radio" id="n" name="status" value="N"
                         @if ($t->status === 'N') checked @endif>BELUM
                     SELESAI</label>
-                <label class="radio-inline" for="y"><input type="radio" id="y" name="status" value="Y"
+                <label class="radio-inline" for="y" style="color: green;"><input type="radio" id="y" name="status" value="Y"
                         @if ($t->status === 'Y') checked @endif>SELESAI</label>
             </div>
             <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Simpan Data</button>

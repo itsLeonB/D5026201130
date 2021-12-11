@@ -13,16 +13,18 @@
         <tr>
             <th class="col-sm-1">No</th>
             <th>Merk</th>
-            <th class="col-sm-1">Ketersediaan</th>
+            <th class="col-sm-2">Ketersediaan</th>
             <th class="col-sm-3">Opsi</th>
         </tr>
         @foreach ($beras as $b)
             <tr>
                 <td>{{ $loop->iteration }}</td>
                 <td>{{ $b->merkberas }}</td>
-                <td>{{ $b->tersedia }}</td>
+                @if ($b->tersedia === 'Y') <td style="color: green;">Tersedia</td>
+                @else <td style="color: red;">Tidak Tersedia</td>
+                @endif
                 <td id="cell-opsi">
-                    <a href="/beras/detail/{{ $b->kodeberas }}" class="btn-sm btn-primary"><i class="fas fa-edit"></i>
+                    <a href="/beras/detail/{{ $b->kodeberas }}" class="btn-sm btn-primary"><i class="fas fa-info-circle"></i>
                         Detail</a>
                     <a href="/beras/edit/{{ $b->kodeberas }}" class="btn-sm btn-warning"><i class="fas fa-edit"></i>
                         Edit</a>

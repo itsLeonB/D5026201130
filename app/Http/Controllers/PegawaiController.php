@@ -11,10 +11,8 @@ class PegawaiController extends Controller
     {
         // mengambil data dari table pegawai
         // $pegawai = DB::table('pegawai')->get();
-
         // mengambil data dari table pegawai dengan pagination
         $pegawai = DB::table('pegawai')->paginate(7);
-
         // mengirim data pegawai ke view index
         return view('pegawai.index', ['pegawai' => $pegawai]);
     }
@@ -68,7 +66,6 @@ class PegawaiController extends Controller
     {
         // menghapus data pegawai berdasarkan id yang dipilih
         DB::table('pegawai')->where('pegawai_id', $id)->delete();
-
         // alihkan halaman ke halaman pegawai
         return redirect('/pegawai');
     }
@@ -77,12 +74,10 @@ class PegawaiController extends Controller
     {
         // menangkap data pencarian
         $cari = $request->cari;
-
         // mengambil data dari table pegawai sesuai pencarian data
         $pegawai = DB::table('pegawai')
             ->where('pegawai_nama', 'like', "%" . $cari . "%")
             ->paginate(7);
-
         // mengirim data pegawai ke view index
         return view('pegawai.index', ['pegawai' => $pegawai]);
     }

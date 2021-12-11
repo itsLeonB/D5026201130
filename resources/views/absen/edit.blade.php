@@ -5,7 +5,7 @@
 @section('konten')
     <a href="/absen" class="btn btn-primary"><i class="fas fa-arrow-left"></i> Kembali</a>
     @foreach ($absen as $a)
-        <form action="/absen/update" method="post">
+        <form action="/absen/update" method="post" style="margin-top: 1%;">
             {{ csrf_field() }}
             <input type="hidden" name="id" value="{{ $a->ID }}">
             <div class="form-group">
@@ -43,9 +43,9 @@
             <div class="form-group">
                 <label>Status:</label>
                 <br>
-                <label class="radio-inline" for="h"><input type="radio" id="a" name="status" value="A"
+                <label class="radio-inline" for="h" style="color: red;"><input type="radio" id="a" name="status" value="A"
                         @if ($a->Status === 'A') checked @endif>TIDAK HADIR</label>
-                <label class="radio-inline" for="a"><input type="radio" id="h" name="status" value="H"
+                <label class="radio-inline" for="a" style="color: green;"><input type="radio" id="h" name="status" value="H"
                         @if ($a->Status === 'H') checked @endif>HADIR</label>
             </div>
             <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Simpan Data</button>

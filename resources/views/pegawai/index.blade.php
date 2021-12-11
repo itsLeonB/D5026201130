@@ -7,7 +7,7 @@
     <form action="/pegawai/cari" method="GET" class="form-inline" style="float: right;">
         <label for="cari">Cari Pegawai:</label>
         <input class="form-control" type="text" name="cari" placeholder="..." value="{{ old('cari') }}">
-        <button class="btn btn-success" type="submit">CARI</button>
+        <button class="btn btn-success" type="submit"><i class="fas fa-search"></i></button>
     </form>
     <table class="table table-bordered table-striped table-hover table-responsive-sm">
         <tr>
@@ -22,7 +22,7 @@
                 <td>{{ $p->pegawai_nama }}</td>
                 <td>{{ $p->pegawai_jabatan }}</td>
                 <td id="cell-opsi">
-                    <a href="/pegawai/detail/{{ $p->pegawai_id }}" class="btn-sm btn-primary"><i class="fas fa-edit"></i>
+                    <a href="/pegawai/detail/{{ $p->pegawai_id }}" class="btn-sm btn-primary"><i class="fas fa-info-circle"></i>
                         Detail</a>
                     <a href="/pegawai/edit/{{ $p->pegawai_id }}" class="btn-sm btn-warning"><i class="fas fa-edit"></i>
                         Edit</a>

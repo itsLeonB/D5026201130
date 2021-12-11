@@ -4,7 +4,7 @@
 
 @section('konten')
     <a href="/tugas" class="btn btn-primary"><i class="fas fa-arrow-left"></i> Kembali</a>
-    <form action="/tugas/store" method="post">
+    <form action="/tugas/store" method="post" style="margin-top: 1%;">
         {{ csrf_field() }}
         <div class="form-group">
             <label for="id_pegawai">Nama Pegawai:</label>
@@ -49,9 +49,9 @@
         <div class="form-group">
             <label>Status:</label>
             <br>
-            <label class="radio-inline" for="n"><input type="radio" id="n" name="status" value="N" checked>BELUM
+            <label class="radio-inline" for="n" style="color: red;"><input type="radio" id="n" name="status" value="N" checked>BELUM
                 SELESAI</label>
-            <label class="radio-inline" for="y"><input type="radio" id="y" name="status" value="Y">SELESAI</label>
+            <label class="radio-inline" for="y" style="color: green;"><input type="radio" id="y" name="status" value="Y">SELESAI</label>
         </div>
         <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Simpan Data</button>
     </form>

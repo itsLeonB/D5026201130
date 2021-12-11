@@ -27,11 +27,10 @@
             </div>
             <div class="form-group">
                 <div class='col-sm-6 input-group'>
-                    <div class="checkbox">
-                        <label for="tersedia">
-                            <input type="checkbox" @if ($b->tersedia === 'Y') checked @endif disabled>Apakah tersedia?
-                        </label>
-                    </div>
+                    @if ($b->tersedia === 'Y') <label
+                            style="color: green;">Tersedia</label>
+                    @else <label style="color: red;">Tidak Tersedia</label>
+                    @endif
                 </div>
             </div>
             <a href="/beras/edit/{{ $b->kodeberas }}" class="btn btn-warning"><i class="fas fa-edit"></i>

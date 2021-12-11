@@ -18,9 +18,9 @@ class AbsenController extends Controller
 
         // mengambil data dari table absen dengan join
         $absen = DB::table('absen')
-        ->join('pegawai', 'absen.ID', '=', 'pegawai.pegawai_id')
-        ->select('absen.*', 'pegawai.pegawai_nama')
-        ->paginate(7);
+            ->join('pegawai', 'absen.IDPegawai', '=', 'pegawai.pegawai_id')
+            ->select('absen.*', 'pegawai.pegawai_nama')
+            ->paginate(7);
 
         // mengirim data absen ke view index
         return view('absen.index', ['absen' => $absen]);
