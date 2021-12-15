@@ -9,27 +9,18 @@
         <div class="form-group">
             <label for="KodeBarang">Kode Barang:</label>
             <div class='col-sm-6 input-group'>
-                <span class="input-group-addon">
-                    <i class="fas fa-user"></i>
-                </span>
                 <input type="text" name="KodeBarang" class="form-control" required>
             </div>
         </div>
         <div class="form-group">
             <label for="Jumlah">Jumlah Pembelian:</label>
             <div class='col-sm-6 input-group'>
-                <span class="input-group-addon">
-                    <i class="fas fa-user"></i>
-                </span>
                 <input type="text" name="Jumlah" class="form-control" required>
             </div>
         </div>
         <div class="form-group">
             <label for="Harga">Harga per item:</label>
             <div class='col-sm-6 input-group'>
-                <span class="input-group-addon">
-                    <i class="fas fa-user"></i>
-                </span>
                 <input type="text" name="Harga" class="form-control" required>
             </div>
         </div>

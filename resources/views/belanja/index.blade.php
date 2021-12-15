@@ -5,12 +5,12 @@
 @section('konten')
     <table class="table table-bordered table-striped table-hover table-responsive-sm">
         <tr>
-            <th>Kode Pembelian</th>
-            <th>Kode Barang</th>
-            <th>Jumlah Pembelian</th>
-            <th>Harga per item</th>
+            <th class="col-sm-2">Kode Pembelian</th>
+            <th class="col-sm-2">Kode Barang</th>
+            <th class="col-sm-2">Jumlah Pembelian</th>
+            <th class="col-sm-2">Harga per item</th>
             <th>Total</th>
-            <th>Action</th>
+            <th class="col-sm-2">Action</th>
         </tr>
         @foreach ($belanja as $kb)
             <tr>
@@ -20,9 +20,9 @@
                 <td>{{ number_format($kb->Harga) }}</td>
                 <td>{{ number_format(($kb->Jumlah)*($kb->Harga)) }}</td>
                 <td id="cell-opsi">
-                    <a href="/belanja/tambah/" class="btn-sm btn-success"><i class="fas fa-edit"></i>
+                    <a href="/belanja/tambah/" class="btn-sm btn-success"><i class="fas fa-shopping-cart"></i>
                         Beli</a>
-                    <a href="/belanja/hapus/{{ $kb->ID }}" class="btn-sm btn-danger"><i class="fas fa-trash"></i>
+                    <a href="/belanja/hapus/{{ $kb->ID }}" class="btn-sm btn-danger"><i class="fas fa-ban"></i>
                         Batal</a>
                 </td>
             </tr>
