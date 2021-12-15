@@ -116,6 +116,7 @@
                 <h5><a href="/absen"><i class="fas fa-calendar-week"></i> Absen</a></h5>
                 <h5><a href="/tugas"><i class="fas fa-tasks"></i> Tugas</a></h5>
                 <h5><a href="/beras"><i class="fas fa-seedling"></i> Beras</a></h5>
+                <h5><a href="/belanja">Keranjang Belanja</a></h5>
             </div>
             <div class="col-sm-1" id="navbutton">
                 <div>

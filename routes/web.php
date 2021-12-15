@@ -68,3 +68,9 @@ Route::post('/beras/update', 'BerasController@update');
 Route::get('/beras/hapus/{id}', 'BerasController@hapus');
 Route::get('/beras/cari', 'BerasController@cari');
 Route::get('/beras/detail/{id}', 'BerasController@detail');
+
+//route CRUD keranjangbelanja
+Route::get('/belanja', 'BelanjaController@index');
+Route::get('/belanja/tambah', 'BelanjaController@tambah');
+Route::post('/belanja/store', 'BelanjaController@store');
+Route::get('/belanja/hapus/{id}', 'BelanjaController@hapus');
